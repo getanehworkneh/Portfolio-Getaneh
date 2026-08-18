@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Getaneh G. Workneh, a Cloud Platform Solutions Architect specializing in AWS and platform engineering.">
+    <title>Getaneh G. Workneh | Cloud Platform Architect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --ink: #17211f; --muted: #65716e; --paper: #f4f1ea; --cream: #fbfaf6; --green: #155b4b; --mint: #cfe8d9; --orange: #e87945; --line: #d9ddd5; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { background: var(--paper); color: var(--ink); font-family: Manrope, sans-serif; line-height: 1.6; }
+        a { color: inherit; text-decoration: none; }
+        .wrap { max-width: 1180px; margin: auto; padding: 0 32px; }
+        header { border-bottom: 1px solid var(--line); }
+        .nav { align-items: center; display: flex; justify-content: space-between; min-height: 78px; }
+        .mark { color: var(--green); font-family: 'DM Mono', monospace; font-size: 17px; font-weight: 500; }
+        .nav-links { display: flex; gap: 34px; font-size: 13px; font-weight: 700; }
+        .nav-links a:hover, .contact-link:hover { color: var(--orange); }
+        .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 70px; min-height: 575px; padding: 98px 0 90px; align-items: center; }
+        .eyebrow, .section-label { color: var(--orange); font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+        h1 { font-size: clamp(48px, 7vw, 88px); letter-spacing: -.07em; line-height: .99; margin: 22px 0 28px; max-width: 700px; }
+        .hero-copy { color: var(--muted); font-size: 17px; max-width: 560px; }
+        .actions { display: flex; align-items: center; gap: 26px; margin-top: 38px; }
+        .button { background: var(--green); color: white; padding: 14px 22px; font-size: 13px; font-weight: 800; transition: transform .2s, background .2s; }
+        .button:hover { background: var(--orange); transform: translateY(-2px); }
+        .contact-link { border-bottom: 1px solid var(--ink); font-family: 'DM Mono', monospace; font-size: 12px; padding-bottom: 4px; }
+        .hero-card { background: var(--mint); min-height: 340px; padding: 22px; position: relative; transform: rotate(1.5deg); }
+        .headshot { display: block; width: 100%; height: 300px; object-fit: cover; object-position: center top; border: 1px solid rgba(21,91,75,.2); }
+        .note-copy { border-top: 1px solid rgba(21,91,75,.4); color: var(--green); font-family: 'DM Mono', monospace; font-size: 12px; margin-top: 14px; padding-top: 14px; }
+        .stats { border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(3, 1fr); }
+        .stat { padding: 25px 0; }
+        .stat + .stat { border-left: 1px solid var(--line); padding-left: 32px; }
+        .stat strong { display: block; color: var(--green); font-size: 34px; letter-spacing: -.06em; }
+        .stat span { color: var(--muted); font-size: 12px; }
+        section { padding: 105px 0; }
+        .section-heading { display: flex; justify-content: space-between; gap: 30px; margin-bottom: 48px; }
+        h2 { font-size: clamp(32px, 4vw, 55px); letter-spacing: -.06em; line-height: 1.05; max-width: 530px; }
+        .section-intro { color: var(--muted); font-size: 14px; max-width: 290px; }
+        .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        .project { background: var(--cream); border-top: 4px solid var(--green); min-height: 270px; padding: 26px; display: flex; flex-direction: column; justify-content: space-between; }
+        .project:nth-child(2) { border-color: var(--orange); }
+        .project:nth-child(3) { border-color: #7999a2; }
+        .project-number { color: var(--muted); font-family: 'DM Mono', monospace; font-size: 11px; }
+        h3 { font-size: 21px; letter-spacing: -.04em; margin: 30px 0 8px; }
+        .project p { color: var(--muted); font-size: 13px; }
+        .tags { color: var(--green); font-family: 'DM Mono', monospace; font-size: 10px; margin-top: 26px; text-transform: uppercase; }
+        .experience { background: var(--green); color: var(--cream); }
+        .experience .section-label { color: var(--mint); }
+        .timeline { border-top: 1px solid rgba(255,255,255,.3); }
+        .role { border-bottom: 1px solid rgba(255,255,255,.3); display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 24px; padding: 29px 0; }
+        .role h3 { margin: 0; font-size: 18px; }
+        .role p, .role time { color: #c4d4cd; font-size: 12px; }
+        .role time { font-family: 'DM Mono', monospace; text-align: right; }
+        .toolbox { display: grid; grid-template-columns: 1fr 1fr; gap: 75px; }
+        .credentials { background: var(--cream); }
+        .cred-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+        .cred-card { border-top: 4px solid var(--orange); padding-top: 18px; }
+        .cred-card h3 { margin: 0 0 12px; font-size: 20px; }
+        .cred-item { color: var(--muted); font-size: 14px; margin-bottom: 8px; }
+        .skill-list { display: flex; flex-wrap: wrap; gap: 10px; align-content: start; }
+        .skill { border: 1px solid var(--line); color: var(--green); font-family: 'DM Mono', monospace; font-size: 11px; padding: 10px 13px; }
+        .contact { background: var(--orange); padding: 70px 0; }
+        .contact h2 { max-width: 690px; }
+        .contact-line { align-items: center; display: flex; gap: 30px; justify-content: space-between; margin-top: 35px; }
+        .contact-line a { font-family: 'DM Mono', monospace; font-size: 13px; }
+        footer { background: var(--ink); color: #c4d4cd; font-family: 'DM Mono', monospace; font-size: 11px; padding: 25px 0; }
+        footer .wrap { display: flex; justify-content: space-between; }
+        @media (max-width: 700px) { .wrap { padding: 0 20px; } .nav { min-height: 65px; } .nav-links { gap: 14px; font-size: 11px; } .hero { display: block; padding: 72px 0 62px; } .hero-card { margin: 60px 12px 20px; } .stats { grid-template-columns: 1fr; } .stat + .stat { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; } section { padding: 72px 0; } .section-heading { display: block; } .section-intro { margin-top: 18px; } .project-grid, .toolbox, .cred-grid { grid-template-columns: 1fr; gap: 15px; } .role { grid-template-columns: 1fr; gap: 8px; } .role time { text-align: left; } .contact-line, footer .wrap { align-items: flex-start; flex-direction: column; gap: 18px; } }
+    </style>
+</head>
+<body>
+    <header><div class="wrap nav"><a class="mark" href="#top">GGW / 2026</a><nav class="nav-links" aria-label="Main navigation"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a></nav></div></header>
+    <main id="top">
+        <div class="wrap hero">
+            <div><p class="eyebrow">Cloud / Platform / Reliability</p><h1>Building the roads great software travels on.</h1><p class="hero-copy">I’m Getaneh Workneh, a Cloud Platform Solutions Architect based in Toronto. I design secure AWS foundations, automate delivery, and make the right path the easiest path for engineering teams.</p><div class="actions"><a class="button" href="#contact">Let’s connect <span aria-hidden="true">↗</span></a><a class="contact-link" href="mailto:getaneh1584@gmail.com">getaneh1584@gmail.com</a></div></div>
+            <div class="hero-card" aria-label="Getaneh Workneh headshot"><img class="headshot" src="getaneh.jpeg" alt="Portrait of Getaneh Workneh"><div class="note-copy">9+ YEARS IN CLOUD & PLATFORM<br>AWS / TERRAFORM / KUBERNETES<br>TORONTO, CANADA</div></div>
+        </div>
+        <div class="wrap stats"><div class="stat"><strong>9+</strong><span>years designing cloud platforms</span></div><div class="stat"><strong>AWS</strong><span>secure, highly available environments</span></div><div class="stat"><strong>IaC</strong><span>reusable Terraform and CloudFormation</span></div></div>
+        <section id="work"><div class="wrap"><div class="section-heading"><div><p class="section-label">Selected capabilities</p><h2>Platforms that help teams move with confidence.</h2></div><p class="section-intro">A practical cloud practice built around secure foundations, repeatable automation, and a better developer experience.</p></div><div class="project-grid"><article class="project"><div><span class="project-number">01 / PLATFORM</span><h3>Reusable cloud foundations</h3><p>Design AWS environments with modular Terraform, CloudFormation, and secure-by-default architecture.</p></div><div class="tags">AWS / Terraform / CloudFormation</div></article><article class="project"><div><span class="project-number">02 / DEVELOPER EXPERIENCE</span><h3>Self-service delivery</h3><p>Build Backstage Scaffolder templates and GitHub Actions workflows that make application onboarding faster and more consistent.</p></div><div class="tags">Backstage / CI/CD / GitHub</div></article><article class="project"><div><span class="project-number">03 / RELIABILITY</span><h3>Production with visibility</h3><p>Connect observability, secrets management, and incident response so teams can operate calmly at scale.</p></div><div class="tags">EKS / CloudWatch / Grafana</div></article></div></div></section>
+        <section class="experience" id="experience"><div class="wrap"><div class="section-heading"><div><p class="section-label">Career timeline</p><h2>Experience with momentum.</h2></div><p class="section-intro">From systems administration to cloud architecture, every role has focused on making technology more dependable and useful.</p></div><div class="timeline"><div class="role"><h3>Cloud Platform Solutions Architect</h3><p>Architect AWS platforms, reusable IaC frameworks, developer self-service, CI/CD automation, and cloud-native integration patterns at CAADP Inc.</p><time>MAY 2024 — PRESENT</time></div><div class="role"><h3>Cloud Support & Platform Engineer</h3><p>Provisioned AWS infrastructure, operated EKS and ECS workloads, supported critical incidents, and built monitoring with CloudWatch, Prometheus, and Grafana at Nokia.</p><time>JAN 2022 — MAY 2024</time></div><div class="role"><h3>AWS Solutions Architect</h3><p>Designed secure enterprise migrations, standardized Terraform modules, implemented IAM and network controls, and mentored engineering staff at Sanxpros Corporation.</p><time>2020 — 2022</time></div><div class="role"><h3>System Administrator</h3><p>Maintained enterprise servers, security, backups, and disaster recovery while automating administration with Python and Shell scripts at S.I. Systems.</p><time>2016 — 2019</time></div></div></div></section>
+        <section><div class="wrap toolbox"><div><p class="section-label">The toolkit</p><h2>Secure by default. Curious by nature.</h2></div><div class="skill-list"><span class="skill">AWS</span><span class="skill">Terraform</span><span class="skill">CloudFormation</span><span class="skill">AWS CDK</span><span class="skill">Kubernetes / EKS</span><span class="skill">Docker / ECS</span><span class="skill">GitHub Actions</span><span class="skill">Jenkins</span><span class="skill">Helm</span><span class="skill">Python / boto3</span><span class="skill">Bash / Shell</span><span class="skill">Prometheus / Grafana</span><span class="skill">GraphQL Federation</span><span class="skill">Incident Management</span></div></div></section>
+        <section class="credentials" id="credentials"><div class="wrap"><div class="section-heading"><div><p class="section-label">Education & Certs</p><h2>Built on foundations, sharpened in practice.</h2></div><p class="section-intro">Formal training in computer science and networking, backed by current cloud certifications.</p></div><div class="cred-grid"><article class="cred-card"><h3>Education</h3><p class="cred-item">Diploma, Computer Networks & Cyber Security - Computek College, Toronto</p><p class="cred-item">MSc, Computer Science - University of Gondar</p><p class="cred-item">BSc, Computer Science - University of Gondar (WES evaluated)</p></article><article class="cred-card"><h3>Certifications</h3><p class="cred-item">AWS Certified Solutions Architect - Associate</p><p class="cred-item">AWS Certified Cloud Practitioner</p><p class="cred-item">AWS Certified DevOps Engineer (In Progress)</p><p class="cred-item">CompTIA A+, CCNA, IBM Cyber Security Bridging Program</p></article></div></div></section>
+        <section class="contact" id="contact"><div class="wrap"><p class="section-label">Start a conversation</p><h2>Let’s build the platform behind your next chapter.</h2><div class="contact-line"><a href="mailto:getaneh1584@gmail.com">getaneh1584@gmail.com</a><a href="https://linkedin.com/in/getaneh-workneh" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="tel:+16479154384">+1 647 915 4384</a><a class="button" href="mailto:getaneh1584@gmail.com">Email Getaneh <span aria-hidden="true">↗</span></a></div></div></section>
+    </main>
+    <footer><div class="wrap"><span>GETANEH G. WORKNEH</span><span>TORONTO, CANADA · © 2026</span></div></footer>
+</body>
+</html>
